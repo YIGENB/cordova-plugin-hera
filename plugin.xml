@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-hera" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Hera</name>
+    <js-module name="Hera" src="www/Hera.js">
+        <clobbers target="cordova.plugins.Hera" />
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="Hera">
+                <param name="ios-package" value="Hera" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/Hera.h" />
+        <source-file src="src/ios/Hera.m" />
+		<source-file src="src/ios/libAFNetworking.a" />
+		<source-file src="src/ios/libMJRefresh.a" />
+		<source-file src="src/ios/libReachability.a" />
+		<source-file src="src/ios/libZipArchive.a" />
+		<header-file src="src/ios/LinkViewController.h" />
+		<source-file src="src/ios/LinkViewController.m" />
+		<header-file src="src/ios/RetrieveViewController.h" />
+		<source-file src="src/ios/RetrieveViewController.m" />
+        <framework src='src/ios/Hera.framework' custom='true'/>
+		<resource-file src="src/ios/HeraRes.bundle" custom='true' />
+    </platform>
+	
+	
+	<platform name="android">
+    <source-file src="src/android/com/hera/Hera.java" target-dir="src/com/android/hera"/>
+	<source-file src="src/android/com/hera/ForResultActivity.java" target-dir="src/com/android/hera"/>
+	<source-file src="src/android/com/hera/api/ApiOpenLink.java" target-dir="src/com/android/hera/api"/>
+	<source-file src="src/android/com/hera/api/ApiOpenPageForResult.java" target-dir="src/com/android/hera/api"/>
+    <config-file target="res/xml/config.xml" parent="/*">
+		<feature name="Hera">
+			<param name="android-package" value="com.android.hera.Hera" />
+		</feature>
+    </config-file>
+
+	
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    </config-file>
+    <framework src="src/android/hera.gradle" custom="true" type="gradleReference"/>
+    <resource-file src="src/android/hera-release.aar" target="libs/hera-release.aar"/>
+  </platform>
+</plugin>

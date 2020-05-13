@@ -1,0 +1,18 @@
+{
+  "name": "cordova-plugin-hera",
+  "version": "1.0.0",
+  "description": "A framework for running WeChat applet. （小程序 SDK，小程序转 H5，小程序转安卓、iOS 原生应用、小程序渲染引擎）",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.your-inc.com/wavesnow/wave-test.git"
+  },
+  "author": "",
+  "keywords": [
+    "hera"
+  ],
+  "license": "ISC"
+}

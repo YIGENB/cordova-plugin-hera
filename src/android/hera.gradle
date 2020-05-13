@@ -1,0 +1,4 @@
+dependencies {
+    //api(name:'hera-release', ext:'aar')
+	api "com.weidian.lib:hera:1.0.0"
+}
