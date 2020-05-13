@@ -9,7 +9,7 @@ https://github.com/weidian-inc/hera
 
 ## 安装
 
-`cordova plugin add cordova-plugin-inappbrowser`
+`cordova plugin add cordova-plugin-hera`
 
 
 ## cordova.plugins.Hera.open 打开小程序
